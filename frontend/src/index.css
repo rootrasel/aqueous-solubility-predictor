@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-grid: rgba(34, 211, 238, 0.04);
+  }
+
+  body {
+    @apply bg-navy-950 text-slate-200 min-h-screen font-sans;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(14, 116, 144, 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
+      radial-gradient(at 50% 100%, rgba(6, 182, 212, 0.08) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  /* Custom scientific scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #060d1a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0891b2;
+  }
+}
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-size: 32px 32px;
+    background-image: 
+      linear-gradient(to right, var(--bg-grid) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--bg-grid) 1px, transparent 1px);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 25px -5px rgba(34, 211, 238, 0.25);
+  }
+
+  .glow-cyan-sm {
+    box-shadow: 0 0 15px -3px rgba(34, 211, 238, 0.2);
+  }
+
+  .text-glow-cyan {
+    text-shadow: 0 0 12px rgba(34, 211, 238, 0.5);
+  }
+
+  .glass-card {
+    background: rgba(11, 17, 32, 0.75);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(51, 65, 85, 0.6);
+  }
+}
